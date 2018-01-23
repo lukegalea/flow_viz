@@ -2,6 +2,10 @@
 
 A utility to track and graph throughput in a Flow workflow to help optimize performance.
 
+Just annotate your Flow with checkpoints and watch the graphs flow in!
+
+![screenshot](https://i.imgur.com/E5kGBng.png)
+
 Inspired by http://teamon.eu/2016/measuring-visualizing-genstage-flow-with-gnuplot/
 
 ## Requirements
