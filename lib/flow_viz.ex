@@ -6,18 +6,42 @@ defmodule FlowViz do
 
   Inspired by http://teamon.eu/2016/measuring-visualizing-genstage-flow-with-gnuplot/
 
+  ## Requirements
+
+  Ensure that gnuplot is installed and x11 and wxt terminal are available.
+
+  On ubuntu:
+
+      sudo apt-get install gnuplot-x11
+
+  and make sure you've got x11 going and DISPLAY is set.
+
   ## Usage ##
 
-      FlowViz.start_link([:links_parsed, :url_checked])
-      FlowViz.plot()
+  ```elixir
+  FlowViz.start_link([:links_parsed, :url_checked])
+  FlowViz.plot()
 
-      Flow.from_enumerable(...)
-        |> FlowViz.checkpoint(:read)
-        |> Flow.map(...)
-        |> Flow.partition
-        |> FlowViz.checkpoint(:something_else)
+  Flow.from_enumerable(...)
+    |> FlowViz.checkpoint(:read)
+    |> Flow.map(...)
+    |> Flow.partition
+    |> FlowViz.checkpoint(:something_else)
 
-      FlowViz.done()
+  FlowViz.done()
+  ```
+
+  ## Installation
+
+  This package can be installed
+  by adding `flow_viz` to your list of dependencies in `mix.exs`:
+
+  ```elixir
+  def deps do
+    [
+      {:flow_viz, "~> 0.1.0"}
+    ]
+  end
   """
 
   @timeres :millisecond

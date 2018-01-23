@@ -4,6 +4,16 @@ A utility to track and graph throughput in a Flow workflow to help optimize perf
 
 Inspired by http://teamon.eu/2016/measuring-visualizing-genstage-flow-with-gnuplot/
 
+## Requirements
+
+Ensure that gnuplot is installed and x11 and wxt terminal are available.
+
+On ubuntu:
+
+    sudo apt-get install gnuplot-x11
+
+and make sure you've got x11 going and DISPLAY is set.
+
 ## Usage
 
     FlowViz.start_link([:links_parsed, :url_checked])
