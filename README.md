@@ -24,10 +24,10 @@ and make sure you've got x11 going and DISPLAY is set.
     FlowViz.plot()
 
     Flow.from_enumerable(...)
-      |> FlowViz.checkpoint(:read)
+      |> FlowViz.checkpoint(:links_parsed)
       |> Flow.map(...)
       |> Flow.partition
-      |> FlowViz.checkpoint(:something_else)
+      |> FlowViz.checkpoint(:url_checked)
 
     FlowViz.done()
 
