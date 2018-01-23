@@ -16,7 +16,7 @@ defmodule FlowViz.Mixfile do
 
   defp package do
     [
-      organization: "Precision Nutrition",
+      name: "flow-viz",
       maintainers: ["Luke Galea"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/lukegalea/flow_viz"}
